@@ -32,3 +32,6 @@ either probability is less than 0.05, we say that there is a statistically signi
 normality. Testing for normality based on skewness and kurtosis jointly, Stata reports a
 probability of 0.000, which reaffirms our concern. It is best to report this as Pr < 0.001
 rather than as Pr = 0.000.
+
+# Draw histogram to show distribution by sex
+histogram wwwhr if wwwhr < 25, frequency by(sex)
