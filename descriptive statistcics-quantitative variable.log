@@ -1,0 +1,58 @@
+-------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\Nyatichi\Desktop\Github\descriptive statistcics-quantitative variable.log
+  log type:  text
+ opened on:   7 May 2026, 09:21:45
+
+. do "C:\Users\Nyatichi\AppData\Local\Temp\STD2744_000000.tmp"
+
+. use descriptive_gss.dta, clear
+
+. 
+end of do-file
+
+. do "C:\Users\Nyatichi\AppData\Local\Temp\STD2744_000000.tmp"
+
+. summarize wwwhr, detail
+
+                     www hours per week
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%            0              0
+ 5%            0              0
+10%            0              0       Obs               1,574
+25%            1              0       Sum of Wgt.       1,574
+
+50%            3                      Mean           5.907878
+                        Largest       Std. Dev.      8.866734
+75%            7             60
+90%           15             64       Variance       78.61897
+95%           21            100       Skewness       3.997908
+99%           40            112       Kurtosis       30.39248
+
+. 
+end of do-file
+
+. do "C:\Users\Nyatichi\AppData\Local\Temp\STD2744_000000.tmp"
+
+. sktest wwwhr
+
+                    Skewness/Kurtosis tests for Normality
+                                                          ------ joint ------
+    Variable |        Obs  Pr(Skewness)  Pr(Kurtosis) adj chi2(2)   Prob>chi2
+-------------+---------------------------------------------------------------
+       wwwhr |      1,574     0.0000        0.0000           .         0.0000
+
+. 
+end of do-file
+
+. do "C:\Users\Nyatichi\AppData\Local\Temp\STD2744_000000.tmp"
+
+. histogram wwwhr if wwwhr < 25, frequency by(sex)
+
+. 
+end of do-file
+
+. graph save Graph "C:\Users\Nyatichi\Desktop\Github\Disrtibution.gph"
+(file C:\Users\Nyatichi\Desktop\Github\Disrtibution.gph saved)
+
