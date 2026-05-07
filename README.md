@@ -22,3 +22,13 @@ than zero), and the kurtosis is 30.39, which is huge compared with 3.0 for a nor
 distribution. Remember that a kurtosis greater than 10 is problematic; a kurtosis over
 20 is very serious. This result suggests that there is a big clump of cases concentrated
 in one part of the distribution.
+
+# Run the test for normality based on skewness and kurtosis
+sktest wwwhr
+
+These results show that, based on skewness, the probability that wwwhr is normal is
+0.000 and, based on kurtosis, the probability that wwwhr is normal is also 0.000. Anytime
+either probability is less than 0.05, we say that there is a statistically significant lack of
+normality. Testing for normality based on skewness and kurtosis jointly, Stata reports a
+probability of 0.000, which reaffirms our concern. It is best to report this as Pr < 0.001
+rather than as Pr = 0.000.
